@@ -32,25 +32,6 @@ export function LibroProvider({ children }) {
     } catch (error) {}
   };
 
-  const crearlibro = async (post) => {
-    try {
-      const res = await postibro(post);
-      mirarlibro();
-      setLibros(res.data);
-      console.log(res.data);
-    } catch (error) {}
-  };
-
-  // const buscarlibro = async (id) => {
-  //   // try {
-  //     const res = await getidlibro(id);
-  //     setLibros(res.data);
-  //     console.log(res.data);
-  //   // } catch (error) 
-    
-  // };
-
-
   const buscarlibro = async (id) => {
     try {
       const res = await getidlibro(id);
@@ -76,7 +57,6 @@ export function LibroProvider({ children }) {
         libros,
         mirarlibro: mirarlibro,
         eliminarlibro: eliminarlibro,
-        crearlibro: crearlibro,
         buscarlibro: buscarlibro,
       }}
     >

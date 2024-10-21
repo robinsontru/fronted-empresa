@@ -17,24 +17,20 @@ function InicioPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const formData = new FormData();
-    formData.append("nombre", nombre); // Usa el estado directamente
-
     try {
       const response = await axios.post(
-        "http://localhost:3001/api/crear",
-        formData,
+        "https://backen-empresa.onrender.com/api/crear",
+        { nombre },
         {
           headers: {
-            "Content-Type": "multipart/form-data",
+            "Content-Type": "application/json", // Cambia el tipo de contenido
           },
         }
       );
       console.log(response.data);
     } catch (error) {
       console.error(error);
-      setMessage("Error al agregar el libro."); // Mensaje de error
+      setMessage("Error al agregar el libro.");
     } finally {
       setNombreLibro(""); // Reinicia el campo de entrada
     }
@@ -88,28 +84,34 @@ function InicioPage() {
       </div>
 
       <div className="card-container">
-        {libros.slice(0).reverse().map((libro) => (
-          <div className="card-body" style={{ width: "18rem" }} key={libro.id}>
-            <Link to={`/buscar/${libro.id}`}>
-              <h5 className="nombre2">Nombre de tu libro favorito</h5>
-            </Link>
-            <p className="card-text">{libro.nombre}</p>
-            <div className="btn-group">
-              <button
-                className="btn btneliminar"
-                type="button"
-                onClick={() => handleDelete(libro.id)}
-              >
-                Eliminar
-              </button>
-              <button className="btn btnupdate" type="button">
-                Editar
-              </button>
+        {libros
+          .slice(0)
+          .reverse()
+          .map((libro) => (
+            <div
+              className="card-body"
+              style={{ width: "18rem" }}
+              key={libro.id}
+            >
+              <Link to={`/buscar/${libro.id}`}>
+                <h5 className="nombre2">Nombre de tu libro favorito</h5>
+              </Link>
+              <p className="card-text">{libro.nombre}</p>
+              <div className="btn-group">
+                <button
+                  className="btn btneliminar"
+                  type="button"
+                  onClick={() => handleDelete(libro.id)}
+                >
+                  Eliminar
+                </button>
+                <button className="btn btnupdate" type="button">
+                  Editar
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
-
     </main>
   );
 }
