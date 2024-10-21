@@ -14,7 +14,7 @@ function Buscarpage() {
       try {
         if (id) {
           const data = await buscarlibro(id);
-          setLibros(data)
+          setLibros(data);
           console.log(data);
         }
       } catch (error) {
@@ -25,26 +25,23 @@ function Buscarpage() {
   }, [id, buscarlibro]);
 
   return (
-<main>
-<Nav/>
-
+    <main>
+      <Nav />
 
       <div className="card-container">
         {libro ? (
           <div className="card-body" style={{ width: "18rem" }} key={libro.id}>
-            {/* <Link to={`/buscar/${libro.id}`}> */}
-              <p >{libro.id}</p>
-              <h5 className="nombre2">Nombre de tu libro favorito</h5>
+            <h5 className="nombre2">Numero de identificacion de tu libro</h5>
+            <p>{libro.id}</p>
+            <h5 className="nombre2">Nombre de tu libro favorito</h5>
             {/* </Link> */}
             <p className="card-text">{libro.nombre}</p>
-           
           </div>
         ) : (
           <p>No hay libros disponibles.</p>
         )}
       </div>
-
-        </main>
+    </main>
   );
 }
 
