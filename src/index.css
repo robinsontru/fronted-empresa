@@ -1,13 +1,134 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-image: url('../public/Book_notebook_doodle_hand_drawn_icon_symbol_education_concept.jpg'); /* Cambia esta ruta a tu imagen */
+  background-size: cover; /*   Hace que la imagen cubra todo el contenedor */
+  background-position: center; /* Centra la imagen */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.titulo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(173, 224, 224);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 2rem;
+}
+
+.formulario{
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  background-color: rgb(71, 131, 160);
+}
+
+
+.nombre2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(173, 224, 224);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size:1em;
+}
+
+.nombre{
+  color: rgb(5, 34, 62);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center; /* Centra las tarjetas en la fila */
+  margin-bottom: 1rem; /* Espacio entre filas */
+}
+
+
+
+.btn{
+  display: flex;
+  justify-content:space-around;
+
+}
+
+
+.btneliminar{
+  background-color: red;
+  color: azure;
+  border-color: black;
+  border-radius: 10px;
+}
+
+.btnupdate{
+  background-color:green;
+  color: azure;
+  border-color: black;
+  border-radius: 10px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card-body {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card-body:hover {
+  transform: scale(1.05);
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+}
+
+.btneliminar {
+  background-color: #e74c3c;
+}
+
+.btneliminar:hover {
+  background-color: #c0392b;
+}
+
+.btnupdate {
+  background-color: #3498db;
+}
+
+.btnupdate:hover {
+  background-color: #2980b9;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .card-body {
+    width: 100%;
+  }
+}
+
+/* Responsivo para pantallas grandes */
+@media (min-width: 769px) {
+  .card-body {
+    width: 18rem;
+  }
 }
