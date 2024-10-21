@@ -51,13 +51,6 @@ function InicioPage() {
     loadTask();
   }, []);
 
-  if (loading) {
-    return <div>Cargando...</div>;
-  }
-
-  if (!Array.isArray(libros)) {
-    return <div>Error: No se pudieron cargar los libros.</div>;
-  }
 
   return (
     <main className="">
