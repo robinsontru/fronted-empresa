@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLibros } from "../context/librocontext";
 import axios from "axios";
 import Nav from "../componentes/nav";
+import Swal  from "sweetalert2";
 
 function Crearpage() {
     const { libros } = useLibros();
@@ -19,6 +20,14 @@ function Crearpage() {
                     },
                 }
             );
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Libro creado con éxito",
+                showConfirmButton: false,
+                timer: 1500,
+              });
+            
             console.log(response.data);
         } catch (error) {
             console.error(error);
