@@ -63,7 +63,7 @@ function InicioPage() {
           <Link to={`/buscar/${libro.id}`}>
             <h5 className="nombre2">Nombre de tu libro favorito</h5>
           </Link>
-          <p className="card-text text-light">{libro.title}</p>
+          <p className="card-text text-light">{libro.nombre}</p>
           <div className="btn-group">
             <button
               className="btn btneliminar"
