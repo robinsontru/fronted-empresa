@@ -57,34 +57,27 @@ function InicioPage() {
         </div> */}
       </div>
 
-      <div className="card-container">
-        {libros
-          .slice(0)
-          .reverse()
-          .map((libro) => (
-            <div
-              className="card-body"
-              style={{ width: "18rem" }}
-              key={libro.id}
+      <div className="card-container" >
+        {libros.slice(0).reverse().map((libro) => (<div
+          className="card-body" style={{ width: "18rem" }} key={libro.id}        >
+          <Link to={`/buscar/${libro.id}`}>
+            <h5 className="nombre2">Nombre de tu libro favorito</h5>
+          </Link>
+          <p className="card-text text-light">{libro.title}</p>
+          <div className="btn-group">
+            <button
+              className="btn btneliminar"
+              type="button"
+              onClick={() => handleDelete(libro.id)}
             >
-              <Link to={`/buscar/${libro.id}`}>
-                <h5 className="nombre2">Nombre de tu libro favorito</h5>
-              </Link>
-              <p className="card-text">{libro.nombre}</p>
-              <div className="btn-group">
-                <button
-                  className="btn btneliminar"
-                  type="button"
-                  onClick={() => handleDelete(libro.id)}
-                >
-                  Eliminar
-                </button>
-                <button className="btn btnupdate" type="button">
-                  Editar
-                </button>
-              </div>
-            </div>
-          ))}
+              Eliminar
+            </button>
+            <button className="btn btnupdate" type="button">
+              Editar
+            </button>
+          </div>
+        </div>
+        ))}
       </div>
     </main>
   );
