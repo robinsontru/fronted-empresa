@@ -1,17 +1,8 @@
 import axios from "axios";
 
 
-export const getlibro = async () => axios.get("https://backen-empresa.onrender.com/api/mirar");
+export const getlibro = async () => axios.get("https://********/api/mirar");
 
-export const deletelibro = async (id) => axios.delete(`https://backen-empresa.onrender.com/api/eliminar/${id}`);
+export const deletelibro = async (id) => axios.delete(`https://********/api/eliminar/${id}`);
 
-
-// export const postibro = async (post) => axios.post("https://backen-empresa.onrender.com/api/crear", post,
-//     {       headers: {             "Content-Type": "application/json", // Asegúrate de enviar como JSON
-//         },
-//     }
-// );
-
-
-
-export const getidlibro = async (id) => axios.get(`https://backen-empresa.onrender.com/api/buscar/${id}`);
+export const getidlibro = async (id) => axios.get(`https://********/api/buscar/${id}`);

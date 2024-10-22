@@ -29,7 +29,7 @@ function Editarpage() {
         e.preventDefault();
         try {
             if (id) {
-                await axios.put(`https://backen-empresa.onrender.com/api/editar/${id}`, { nombre }, {
+                await axios.put(`https://********/api/editar/${id}`, { nombre }, {
                     headers: { "Content-Type": "application/json" },
                 });
                 Swal.fire({

@@ -12,7 +12,7 @@ function Crearpage() {
         e.preventDefault();
         try {
             const response = await axios.post(
-                "https://backen-empresa.onrender.com/api/crear",
+                "https://********/api/crear",
                 { nombre },
                 {
                     headers: {
