@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-export const getlibro = async () => axios.get("https://backen-empresa.onrender.com/api/mirar");
+export const getlibro = async () => axios.get("https://jsonplaceholder.typicode.com/posts");
 
 export const deletelibro = async (id) => axios.delete(`https://backen-empresa.onrender.com/api/eliminar/${id}`);
 

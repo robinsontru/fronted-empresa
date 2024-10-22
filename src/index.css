@@ -1,16 +1,18 @@
 body {
   margin: 0;
-  background-image: url('../public/Book_notebook_doodle_hand_drawn_icon_symbol_education_concept.jpg'); /* Cambia esta ruta a tu imagen */
-  background-size: cover; /*   Hace que la imagen cubra todo el contenedor */
-  background-position: center; /* Centra la imagen */
+  /* background-image: url('../public/Book_notebook_doodle_hand_drawn_icon_symbol_education_concept.jpg'); 
+  background-size: contain; 
+  background-position: center; 
+  background-repeat: no-repeat;  */
+  background-color: #141313;
+  /* height: 10vh; Asegúrate de que el body tenga una altura completa */
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 
-.titulo{
+
+
+.titulo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +21,7 @@ code {
   font-size: 2rem;
 }
 
-.formulario{
+.formulario {
   display: flex;
   justify-content: center;
   height: 100px;
@@ -27,16 +29,16 @@ code {
 }
 
 
-.nombre2{
+.nombre2 {
   display: flex;
   justify-content: center;
   align-items: center;
   color: rgb(173, 224, 224);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size:1em;
+  font-size: 1em;
 }
 
-.nombre{
+.nombre {
   color: rgb(5, 34, 62);
   align-items: center;
   display: flex;
@@ -45,28 +47,30 @@ code {
 
 .row {
   display: flex;
-  justify-content: center; /* Centra las tarjetas en la fila */
-  margin-bottom: 1rem; /* Espacio entre filas */
+  justify-content: center;
+  /* Centra las tarjetas en la fila */
+  margin-bottom: 1rem;
+  /* Espacio entre filas */
 }
 
 
 
-.btn{
+.btn {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
 
 }
 
 
-.btneliminar{
+.btneliminar {
   background-color: red;
   color: azure;
   border-color: black;
   border-radius: 10px;
 }
 
-.btnupdate{
-  background-color:green;
+.btnupdate {
+  background-color: green;
   color: azure;
   border-color: black;
   border-radius: 10px;
@@ -82,7 +86,7 @@ code {
 .card-body {
   border: 1px solid #ddd;
   border-radius: 10px;
-  background-color: #f9f9f9;
+  background-color: rgba(0, 0, 0, 0.9);
   padding: 20px;
   transition: transform 0.3s ease;
 }
@@ -132,3 +136,12 @@ code {
     width: 18rem;
   }
 }
+
+
+.cards {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+
+}
+

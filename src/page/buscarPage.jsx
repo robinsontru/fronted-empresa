@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"; // Importa useParams
 import { useLibros } from "../context/librocontext";
-import "../App.css";
 import Nav from "../componentes/nav";
 
 function Buscarpage() {

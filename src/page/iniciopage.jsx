@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLibros } from "../context/librocontext";
 import axios from "axios";
-import "../App.css";
+
 import { Link } from "react-router-dom";
 import Nav from "../componentes/nav";
 
@@ -13,27 +13,6 @@ function InicioPage() {
 
   const handleDelete = (id) => {
     eliminarlibro(id);
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.post(
-        "https://backen-empresa.onrender.com/api/crear",
-        { nombre },
-        {
-          headers: {
-            "Content-Type": "application/json", // Cambia el tipo de contenido
-          },
-        }
-      );
-      console.log(response.data);
-    } catch (error) {
-      console.error(error);
-      setMessage("Error al agregar el libro.");
-    } finally {
-      setNombreLibro(""); // Reinicia el campo de entrada
-    }
   };
 
   useEffect(() => {
@@ -51,29 +30,31 @@ function InicioPage() {
     loadTask();
   }, []);
 
-
   return (
     <main className="">
       <Nav></Nav>
       <div className="formulario">
         <h1 className="titulo">Bienvenidos a tu biblioteca</h1>
-        <form onSubmit={handleSubmit}>
-          <div>
-            <p>Ingresa el nombre de tu libro favorito:</p>
-            <input
-              type="text"
-              id="nombre"
-              name="nombre"
-              className="btningreso"
-              placeholder="Nombre del libro"
-              value={nombre}
-              onChange={(e) => setNombreLibro(e.target.value)}
-            />
-            <button type="submit" disabled={!nombre}>
-              Enviar
-            </button>
-          </div>
-        </form>
+
+        {/* <div>
+          <form onSubmit={handleSubmit}>
+            <div>
+              <p>Ingresa el nombre de tu libro favorito:</p>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                className="btningreso"
+                placeholder="Nombre del libro"
+                value={nombre}
+                onChange={(e) => setNombreLibro(e.target.value)}
+              />
+              <button type="submit" disabled={!nombre}>
+                Enviar
+              </button>
+            </div>
+          </form>
+        </div> */}
       </div>
 
       <div className="card-container">
