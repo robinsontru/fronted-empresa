@@ -35,26 +35,6 @@ function InicioPage() {
       <Nav></Nav>
       <div className="formulario">
         <h1 className="titulo">Bienvenidos a tu biblioteca</h1>
-
-        {/* <div>
-          <form onSubmit={handleSubmit}>
-            <div>
-              <p>Ingresa el nombre de tu libro favorito:</p>
-              <input
-                type="text"
-                id="nombre"
-                name="nombre"
-                className="btningreso"
-                placeholder="Nombre del libro"
-                value={nombre}
-                onChange={(e) => setNombreLibro(e.target.value)}
-              />
-              <button type="submit" disabled={!nombre}>
-                Enviar
-              </button>
-            </div>
-          </form>
-        </div> */}
       </div>
 
       <div className="card-container">
@@ -73,9 +53,9 @@ function InicioPage() {
                 >
                   Eliminar
                 </button>
-                <Link to={`/editar/${libro.id}`}
-                className="btn btnupdate" type="button">
-                  Editar
+
+                <Link to={`/editar/${libro.id}`}>
+                  <p className="">Editar</p>
                 </Link>
               </div>
             </div>
