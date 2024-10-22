@@ -3,6 +3,7 @@ import { LibroProvider } from "./context/librocontext";
 import Iniciopage from "./page/iniciopage";
 import Buscarpage from "./page/buscarPage";
 import Crearpage from "./page/crearPage";
+import Editarpage from "./page/Editarpage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
             <Route path="/" element={<Iniciopage />} />
             <Route path="/buscar/:id" element={<Buscarpage />} />
             <Route path="/crear" element={<Crearpage />} />
+            <Route path="/editar/:id" element={<Editarpage />} />
           </Routes>
         </main>
       </BrowserRouter>
