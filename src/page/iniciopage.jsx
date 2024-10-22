@@ -42,9 +42,11 @@ function InicioPage() {
           libros.slice(0).reverse().map((libro) => (
             <div className="card-body" style={{ width: "18rem" }} key={libro.id}>
               <Link to={`/buscar/${libro.id}`}>
-                <h5 className="nombre2">{libro.nombre || "Nombre de tu libro favorito"}</h5>
+                <h5 className="nombre2">{libro.id}</h5>
+                <h7 className="nombre2">Nombre de tu libro favorito</h7>
+                <p className="card-text text-light">{libro.nombre}</p>
+
               </Link>
-              <p className="card-text text-light">{libro.nombre}</p>
               <div className="btn-group">
                 <button
                   className="btn btneliminar"

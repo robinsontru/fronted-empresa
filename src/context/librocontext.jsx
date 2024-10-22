@@ -13,8 +13,7 @@ export const useLibros = () => {
 };
 
 export function LibroProvider({ children }) {
-  const [libros, setLibros] = useState([]); // Asegúrate de que sea un array
-  // Renamed to setLibros
+  const [libros, setLibros] = useState([]);
 
   const mirarlibro = async () => {
     try {
@@ -54,10 +53,6 @@ export function LibroProvider({ children }) {
   useEffect(() => {
     mirarlibro();
   }, []);
-
-  // useEffect(() => {
-  //   buscarlibro();
-  // }, []);
 
   return (
     <libroContext.Provider

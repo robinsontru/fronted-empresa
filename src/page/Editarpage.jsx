@@ -8,16 +8,15 @@ import Swal from "sweetalert2";
 function Editarpage() {
     const { libros } = useLibros();
     const [nombre, setNombreLibro] = useState("");
-    const { id } = useParams(); // Obtener el id de la URL
+    const { id } = useParams();
     const navigate = useNavigate();
 
     useEffect(() => {
-        // Si hay un id en los params, significa que estamos en modo edición
         if (id) {
             const fetchLibro = async () => {
                 try {
                     const response = await axios.get(`https://backen-empresa.onrender.com/api/libro/${id}`);
-                    setNombreLibro(response.data.nombre); // Prellenar el nombre
+                    setNombreLibro(response.data.nombre);
                 } catch (error) {
                     console.error("Error al cargar el libro", error);
                 }
@@ -30,7 +29,6 @@ function Editarpage() {
         e.preventDefault();
         try {
             if (id) {
-                // Si estamos editando un libro
                 await axios.put(`https://backen-empresa.onrender.com/api/editar/${id}`, { nombre }, {
                     headers: { "Content-Type": "application/json" },
                 });
@@ -41,12 +39,12 @@ function Editarpage() {
                     showConfirmButton: false,
                     timer: 1500,
                 });
-            } 
-            navigate("/"); 
+            }
+            navigate("/");
         } catch (error) {
             console.error("Error al guardar el libro", error);
         } finally {
-            setNombreLibro(""); 
+            setNombreLibro("");
         }
     };
 
