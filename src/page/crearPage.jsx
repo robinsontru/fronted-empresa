@@ -35,32 +35,16 @@ function Crearpage() {
             </div>
 
             <div className="cards">
-                <div className="card-body " style={{ width: "2rem" }}>
+                <div className="card-body " style={{ width: "15rem" }}>
                     <div>
                         <h5 class="card-title"> Ingresa el nombre de tu libro favorito</h5>
                         <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
                         <form onSubmit={handleSubmit}>
-                            {/* <input
-                                type="text"
-                                id="nombre"
-                                name="nombre"
-                                className="btningreso"
-                                placeholder="Nombre del libro"
-                                value={nombre}
-                                onChange={(e) => setNombreLibro(e.target.value)}
-                            /> */}
-
-
                             <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
-                                <input type="text" id="nombre"
-                                    name="nombre"
-                                    className="btningreso"
-                                    placeholder="Nombre del libro"
-                                    value={nombre}
+                                <input type="text" id="nombre" name="nombre" className="btningreso" placeholder="Nombre del libro" value={nombre}
                                     onChange={(e) => setNombreLibro(e.target.value)} class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" />
                             </div>
-                            <button class="btn1" type="submit" disabled={!nombre}>
+                            <button class="btn btn-success" type="submit" disabled={!nombre}>
                                 Enviar
                             </button>
 

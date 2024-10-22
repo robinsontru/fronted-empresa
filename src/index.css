@@ -123,3 +123,7 @@ main {
     width: 18rem;
   }
 }
+.cards{
+  display: flex;
+  justify-content: center;
+}
