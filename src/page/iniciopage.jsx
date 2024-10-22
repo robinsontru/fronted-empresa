@@ -73,8 +73,8 @@ function InicioPage() {
                 >
                   Eliminar
                 </button>
-                <Link to={`/editar/${libro.id}`}> 
-                className="btn btnupdate" type="button"
+                <Link to={`/editar/${libro.id}`}
+                className="btn btnupdate" type="button">
                   Editar
                 </Link>
               </div>
